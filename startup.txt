@@ -1,1 +1,1 @@
-gunicorn --bind=0.0.0.0 --workers=4 --timeout 1000 startup:app
+gunicorn --bind=0.0.0.0 --workers=4  startup:app
