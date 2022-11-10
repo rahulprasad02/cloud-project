@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Prediction</title>
+</head>
+
+<body>
+    <div>
+        <h1>Placement CTC Prediction</h1>
+        {% if result %}
+            <p><b>CTC</b> : {{ result }} LPA</p>
+        {% endif %}
+        <form action="/predict" method="post">
+            <input type="number" placeholder="Enter 10th percentage" name="ssc_p">
+            <br />
+            <br />
+            <input type="number" placeholder="Enter 12th percentage" name="hsc_p">
+            <br />
+            <br />
+            <input type="number" placeholder="Enter degree percentage" name="deg_p">
+            <br />
+            <br />
+            <input type="number" placeholder="Enter online test percentage" name="etest_p">
+            <br />
+            <br />
+            <input type="number" placeholder="Enter MBA percentage" name="mba_p">
+            <br />
+            <br />
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+
+</body>
+
+</html>
